@@ -1,35 +1,48 @@
 import React, { Component } from 'react';
-let date2, attendance, room, positionId;
+let attendance, room, positionId, deskId;
 class AdditionalInformation extends Component {
 
 
     data = () => {
         return this.props.data.students.forEach(element => {
             if (element.studentId === this.props.studentid) {
-                date2 = this.props.data.date
                 attendance = element.absent ? "No" : "Yes"
                 room = element.roomId
                 positionId = element.positionId
+
             }
         });
     }
 
 
+    deskData = () => {
+        return this.props.data.desks.forEach(desk => {
+            if (desk.positionId === positionId) {
+                deskId = desk.deskId
+            }
+        });
+    }
+
+
+
     render() {
-        console.log(this.props);
+
         // this.data()
         this.data()
-        console.log(date2)
+        this.deskData()
+
         return (
             <div>
                 <ul>
                     <li>
-                        Date: {this.props.data.date} 
-                        <br/>
+                        Date: {this.props.data.date}
+                        <br />
                         Present: {attendance}
-                        <br/>
+                        <br />
                         Room: {room}
-                        <br/>
+                        <br />
+                        Desk ID: {deskId}
+                        <br />
                         Desk Position: {positionId}
 
 
