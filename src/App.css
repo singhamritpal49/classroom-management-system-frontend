@@ -10,9 +10,15 @@
   color: white;
 } */
 
-.container {
-  flex-direction: row-reverse 
+.condtainer {
+  display: flex; /* or inline-flex */
+  
 }
+/* .item {
+  display: flex;
+} */
+
+
 
 /* .displaystudent {
   position: right;

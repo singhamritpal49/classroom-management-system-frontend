@@ -18,10 +18,10 @@ export class AllStudents extends Component {
                 allStudents: data
             }))
     }
+
     handleShow = (newStudent) => {
         this.setState({ show: !this.state.show, student: newStudent })
     }
-
 
 
 

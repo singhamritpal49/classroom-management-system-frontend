@@ -7,42 +7,44 @@ export class Display extends Component {
 
     componentDidMount() {
         fetch('http://localhost:3000/classroom/dailyData')
-        .then(res => res.json())
-        .then(data => this.setState({
-            desks: data
-        }))
-    }
-    renderDates = () => {
-        return this.state.desks.forEach(date => <AdditionalInformation data={date}  />
+            .then(res => res.json())
+            .then(data => this.setState({
+                desks: data,
 
-/*            date.students.forEach(student => {
-                if (student.studentId === this.props.show.id) {
-                        // return (<div> Date: date.date <br /> present in the class: student.absent </div>)
-                    // console.log(student.absent )
-                  return   <AdditionalInformation date={date.date} present={student.absent} />
-                }
-            })*/
+            }))
+    }
+
+    renderDates = () => {
+        return this.state.desks.map(date => <AdditionalInformation data={date} studentid={this.props.show.id} />
+
+            /*            date.students.forEach(student => {
+                            if (student.studentId === this.props.show.id) {
+                                    // return (<div> Date: date.date <br /> present in the class: student.absent </div>)
+                                // console.log(student.absent )
+                              return   <AdditionalInformation date={date.date} present={student.absent} />
+                            }
+                        })*/
         )
     }
-    
+
 
 
     render() {
 
-        console.log(this.state)
+        // console.log(this.state)
         return (
-            <div className="displaystudent">
+            <div className="item">
                 <h1> Student Details</h1>
                 <div class="container">
-                    Student Id:  {this.props.show.id}
+                    Student Id: {this.props.show.id}
                     <br />
-                    First Name:  {this.props.show.bio.givenName}
+                    First Name: {this.props.show.bio.givenName}
                     <br />
-                    Last Name:  {this.props.show.bio.familyName}
+                    Last Name: {this.props.show.bio.familyName}
                     <br />
-                    Nick Name:  {this.props.show.bio.nickName}
+                    Nick Name: {this.props.show.bio.nickName}
                     <br />
-                    Email:  {this.props.show.bio.email}
+                    Email: {this.props.show.bio.email}
                     <br />
                     Age: {this.props.show.bio.age}
                     <br />
@@ -63,9 +65,9 @@ export class Display extends Component {
                     Project 3  : {this.props.show.grades.project3}
                     <br />
                     Project 4  : {this.props.show.grades.project4}
-                    <h1> attandence </h1>
+                    <h3> Daily Record </h3>
                     {this.renderDates()}
-                    
+
                 </div>
             </div>
         );
