@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 let positionId;
 let studentId;
 let studentName;
+let roomID = [];
+
 export class StudentDeskData extends Component {
     state = {
         deskData: [],
-        studentData: []
+        studentData: [],
+        room: []
     }
     componentDidMount() {
         fetch("http://localhost:3000/classroom/students")
@@ -20,6 +23,15 @@ export class StudentDeskData extends Component {
             .then(data => {
                 this.setState({ deskData: data })
             })
+
+        fetch("http://localhost:3000/classroom/rooms")
+            .then(res => res.json())
+            .then(data => {
+                this.setState({ room: data })
+            })
+
+
+
     }
 
     gettingPositionId = () => {
@@ -38,32 +50,48 @@ export class StudentDeskData extends Component {
                 //    console.log(desk)
                 if (positionId === student.positionId) {
                     studentId = student.studentId
-                    
+
                 }
             })
         })
     }
+
+
     gettingStudentName = () => {
         this.state.studentData.forEach(student => {
+            // console.log(student)
             if (student.id === studentId) {
-                studentName = `${student.bio.givenName}   ${student.bio.familyName}`       }
+                studentName = `${student.bio.givenName}   ${student.bio.familyName}`
+            }
         })
     }
 
+    gettingDeskLocation = () => {
+        this.state.room.forEach(room => {
+            //  console.log(room.roomId)
+            room.positions.forEach(position => {
+                if (positionId === position) {
+                    // console.log(room.roomId)
+                    return roomID = room.roomId
+                }
+            })
+        })
+    }
 
 
 
 
     render() {
+        console.log(roomID)
         this.gettingPositionId()
         this.gettingStudentId()
         this.gettingStudentName()
-        // console.log(positionId)
-        // console.log(this.state.studentData)
-        // console.log(studentId)
+        this.gettingDeskLocation()
         return (
             <div>
-                Student  = {studentName}
+                Student: {studentName}
+                <br />
+                Room ID: {roomID}
             </div>
         );
     }
