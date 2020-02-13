@@ -29,34 +29,34 @@ export class Display extends Component {
             <div className="item">
                 <h1> Student Details</h1>
                 <div className="container">
-                    Student Id: {this.props.show.id}
+                    <b>Student Id:</b> {this.props.show.id}
                     <br />
-                    First Name: {this.props.show.bio.givenName}
+                    <b>First Name:</b> {this.props.show.bio.givenName}
                     <br />
-                    Last Name: {this.props.show.bio.familyName}
+                    <b> Last Name:</b> {this.props.show.bio.familyName}
                     <br />
-                    Nick Name: {this.props.show.bio.nickName}
+                    <b>Nick Name:</b> {this.props.show.bio.nickName}
                     <br />
-                    Email: {this.props.show.bio.email}
+                    <b>Email:</b> {this.props.show.bio.email}
                     <br />
-                    Age: {this.props.show.bio.age}
+                    <b>Age:</b> {this.props.show.bio.age}
                     <br />
-                    Grade: {this.props.show.bio.grade}
+                    <b>Grade:</b> {this.props.show.bio.grade}
                     <br />
                     <h3>Student History</h3>
                     
-                    Absences: {this.props.show.history.absences}
+                    <b>Absences:</b> {this.props.show.history.absences}
                     <br />
-                    GPA: {this.props.show.history.gpa}
+                    <b>GPA:</b> {this.props.show.history.gpa}
                     <br />
                     <h3>Student Grades</h3>
-                    Project 1  : {this.props.show.grades.project1}
+                    <b>Project 1:</b> {this.props.show.grades.project1}
                     <br />
-                    Project 2  : {this.props.show.grades.project2}
+                    <b>Project 2:</b> {this.props.show.grades.project2}
                     <br />
-                    Project 3  : {this.props.show.grades.project3}
+                    <b>Project 3:</b> {this.props.show.grades.project3}
                     <br />
-                    Project 4  : {this.props.show.grades.project4}
+                    <b>Project 4:</b> {this.props.show.grades.project4}
                     <h3> Daily Record </h3>
                     {this.renderDates()}
                     

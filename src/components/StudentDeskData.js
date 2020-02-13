@@ -89,9 +89,9 @@ export class StudentDeskData extends Component {
         this.gettingDeskLocation()
         return (
             <div>
-                Student: {studentName}
+                <b>Student:</b> {studentName}
                 <br />
-                Room ID: {roomID}
+                <b> Room ID:</b> {roomID}
             </div>
         );
     }

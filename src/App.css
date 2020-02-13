@@ -1,25 +1,27 @@
 
-/* .App-header {
+.App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: calc(10px + 2vmin); */
   color: white;
-} */
-
-.condtainer {
-  display: flex; /* or inline-flex */
-  
 }
-/* .item {
-  display: flex;
+
+
+
+ /* .student{
+  padding-right: 50%;
 } */
 
 
 
-/* .displaystudent {
-  position: right;
-} */
+.studentlist{
+  cursor: pointer;
+}
+
+.staff  {
+  padding-left: 10%;
+}

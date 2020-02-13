@@ -35,15 +35,15 @@ class AdditionalInformation extends Component {
             <div>
                 <ul>
                     <li>
-                        Date: {this.props.data.date}
+                        <b>Date:</b> {this.props.data.date}
                         <br />
-                        Present: {attendance}
+                        <b>Present:</b> {attendance}
                         <br />
-                        Room: {room}
+                        <b>Room:</b> {room}
                         <br />
-                        Desk ID: {deskId}
+                        <b> Desk ID:</b> {deskId}
                         <br />
-                        Desk Position: {positionId}
+                        <b> Desk Position:</b> {positionId}
 
 
                     </li>

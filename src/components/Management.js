@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Desk from './Desk'
+
 export class Management extends Component {
     state = {
         deskData: []
@@ -14,10 +15,6 @@ export class Management extends Component {
     }
 
 
-    // getdata = () => {
-    //     return this.state.deskData.map(desk => <Desk deskid={desk.id} /> )
-    // }
-
 
     render() {
         
@@ -29,8 +26,8 @@ export class Management extends Component {
         })
 
         return (
-            <div className="container">
-                <h1>Management</h1>
+            <div className="staff">
+                <h1>For Custodians</h1>
                 {alldesks}
             </div>
         );

@@ -14,9 +14,9 @@ export default class Student extends Component {
     render() {
 
         return (
-            <div className="container">  { 
+            <div className="student" >  { 
                 <ul>
-        <li onClick={ (event) => this.handleClick(event) }> {this.props.student.bio.givenName}  {this.props.student.bio.familyName} </li>
+        <li className="studentlist" onClick={ (event) => this.handleClick(event) }> {this.props.student.bio.givenName}  {this.props.student.bio.familyName} </li>
                 </ul> 
                 }
  

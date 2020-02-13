@@ -38,8 +38,9 @@ export class AllStudents extends Component {
         })
         // console.log(this.state)
         return (
-            <div>
-                <h1> Students</h1>
+            <div className="student">
+                <h1> For Teachers</h1>
+                <h5>Student List</h5>
                 {allstudents}
                 {this.state.show ?
                     <Display show={this.state.student}  />
