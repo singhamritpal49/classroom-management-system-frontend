@@ -14,13 +14,14 @@ export default class Student extends Component {
     render() {
 
         return (
-            <div class="container">  { 
+            <div className="container">  { 
                 <ul>
         <li onClick={ (event) => this.handleClick(event) }> {this.props.student.bio.givenName}  {this.props.student.bio.familyName} </li>
                 </ul> 
                 }
  
                 {/* {console.log(this.props.student)} */}
+                
             </div>
         )
     }

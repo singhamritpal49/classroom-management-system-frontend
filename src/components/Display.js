@@ -15,18 +15,11 @@ export class Display extends Component {
     }
 
     renderDates = () => {
-        return this.state.desks.map(date => <AdditionalInformation data={date} studentid={this.props.show.id} />
-
-            /*            date.students.forEach(student => {
-                            if (student.studentId === this.props.show.id) {
-                                    // return (<div> Date: date.date <br /> present in the class: student.absent </div>)
-                                // console.log(student.absent )
-                              return   <AdditionalInformation date={date.date} present={student.absent} />
-                            }
-                        })*/
+        return this.state.desks.map(date => <AdditionalInformation data={date} studentid={this.props.show.id}  />
         )
     }
 
+   
 
 
     render() {
@@ -35,7 +28,7 @@ export class Display extends Component {
         return (
             <div className="item">
                 <h1> Student Details</h1>
-                <div class="container">
+                <div className="container">
                     Student Id: {this.props.show.id}
                     <br />
                     First Name: {this.props.show.bio.givenName}
@@ -51,13 +44,12 @@ export class Display extends Component {
                     Grade: {this.props.show.bio.grade}
                     <br />
                     <h3>Student History</h3>
-                    <br />
+                    
                     Absences: {this.props.show.history.absences}
                     <br />
                     GPA: {this.props.show.history.gpa}
                     <br />
                     <h3>Student Grades</h3>
-                    <br />
                     Project 1  : {this.props.show.grades.project1}
                     <br />
                     Project 2  : {this.props.show.grades.project2}
@@ -67,7 +59,7 @@ export class Display extends Component {
                     Project 4  : {this.props.show.grades.project4}
                     <h3> Daily Record </h3>
                     {this.renderDates()}
-
+                    
                 </div>
             </div>
         );

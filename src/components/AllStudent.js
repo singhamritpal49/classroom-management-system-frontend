@@ -42,7 +42,7 @@ export class AllStudents extends Component {
                 <h1> Students</h1>
                 {allstudents}
                 {this.state.show ?
-                    <Display show={this.state.student} />
+                    <Display show={this.state.student}  />
                     :
                     null
                 }
