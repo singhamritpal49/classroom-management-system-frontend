@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 let attendance, room, positionId, deskId;
+
 class AdditionalInformation extends Component {
 
 
@@ -26,7 +27,6 @@ class AdditionalInformation extends Component {
 
 
     render() {
-
         // this.data()
         this.data()
         this.deskData()

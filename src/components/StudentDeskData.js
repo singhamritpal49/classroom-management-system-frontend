@@ -82,7 +82,6 @@ export class StudentDeskData extends Component {
 
 
     render() {
-        console.log(roomID)
         this.gettingPositionId()
         this.gettingStudentId()
         this.gettingStudentName()

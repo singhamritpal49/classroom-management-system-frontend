@@ -23,8 +23,6 @@ export class Display extends Component {
 
 
     render() {
-
-        // console.log(this.state)
         return (
             <div className="item">
                 <h1> Student Details</h1>

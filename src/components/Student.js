@@ -20,7 +20,7 @@ export default class Student extends Component {
                 </ul> 
                 }
  
-                {/* {console.log(this.props.student)} */}
+
                 
             </div>
         )
